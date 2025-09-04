@@ -9,7 +9,7 @@ data:
     <html>
       <head><meta charset="utf-8"><title>Nolan — Minikube</title></head>
       <body style="font-family: system-ui; max-width: 720px; margin: 40px auto;">
-        <h1>It works 🎉 by Nolan</h1>
+        <h1>It works 🎉 by Nolan ez</h1>
         <p>Servi par NGINX dans Kubernetes (namespace <b>prod</b>).</p>
       </body>
     </html>
