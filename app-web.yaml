@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  creationTimestamp: "2025-09-04T18:47:28Z"
+  generation: 3
+  name: web-prod
+  namespace: argocd
+  resourceVersion: "33226"
+  uid: cb1d4e8a-6ab9-4613-b13a-2106dca7ebe3
+spec:
+  destination:
+    namespace: prod
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: k8s
+    repoURL: https://github.com/deeway92/Site_Kubernetes_ArgoCD.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      enabled: true
+      prune: true
+      selfHeal: true
+status:
+  controllerNamespace: argocd
+  health:
+    lastTransitionTime: "2025-09-04T18:47:28Z"
+    status: Healthy
+  reconciledAt: "2025-09-04T18:47:28Z"
+  resourceHealthSource: appTree
+  sourceHydrator: {}
+  sourceType: Directory
+  summary: {}
+  sync:
+    comparedTo:
+      destination:
+        namespace: prod
+        server: https://kubernetes.default.svc
+      source:
+        path: k8s
+        repoURL: https://github.com/deeway92/Site_Kubernetes_ArgoCD.git
+        targetRevision: main
+    revision: 0689203dd5dbff5ff74f6e9cff812a1adab9d356
+    status: Synced
